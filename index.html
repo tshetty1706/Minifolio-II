@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(28, 27, 27);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 50px;
+        }
+
+        #container{
+            max-width: 700px;
+            height: fit-content;
+            padding: 80px;
+            margin: auto;
+            background-color: rgb(0, 0, 0);
+            outline: 2px solid white;
+            outline-offset: 5px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #container h1 {
+            max-width: 800px;
+        }
+
+        #container h3 {
+            font-weight: normal;
+        }
+
+        #skills p{
+            display: inline-block;
+            background-color: white;
+            color: rgb(138, 4, 255);
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 15px;
+            margin: 5px;
+        }
+
+        
+        #action{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px;
+        }
+
+        #action button{
+            background-color: rgb(138, 4, 255);
+            color: white;
+            padding: 12px 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px){
+            #action{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id = container>
+        <h1>Trisha Vijay Shetty</h1>
+        <h3>I am learning <span style="color: rgb(138, 4, 255);">MERN Stack</span> development</h3>
+        <div id="skills">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JAVASCRIPT</p>
+            <p>JAVA</p>
+            <p>C</p>
+        </div>
+        <div id="action">
+            <button onclick="about()">About Me</button>
+            <button onclick="cert()">Certificate</button>
+            <button onclick="contact()">Contact Us</button>
+            <button onclick="project()">Project</button>
+        </div>
+
+        <div id="display"></div>
+    </div>
+</body>
+<script>
+    let contentBox = document.getElementById("display");
+
+    function about(){
+        contentBox.style.display = "inline-block";
+        contentBox.innerHTML = "<div style='background-color:rgba(40, 40, 40, 0.534); padding: 20px; border-radius: 10px;'><h2 style='color:rgb(138, 4, 255);'>About Me</h2 ><p>I am Trisha Vijay Shetty, currently pursuing my degree in Computer Science. I have a keen interest in web development and aspire to become a full-stack developer specializing in the MERN stack.</p></div>";
+    }
+
+    function cert(){
+        contentBox.style.display = "inline-block";
+        contentBox.innerHTML = "<div style='background-color:rgba(40, 40, 40, 0.534); padding: 20px; border-radius: 10px;'><h2 style='color:rgb(138, 4, 255);'><h2 style='color:rgb(138, 4, 255);'>Certificate</h2><p>Completed MERN Stack Development Certificate.</p></div>";
+    }
+
+    function contact(){
+        contentBox.style.display = "inline-block";
+        contentBox.innerHTML = "<div style='background-color:rgba(40, 40, 40, 0.534); padding: 20px; border-radius: 10px;'><h2 style='color:rgb(138, 4, 255);'><h2 style='color:rgb(138, 4, 255);'>Contact Us</h2><p>Email: trisha@example.com</p></div>";
+    }
+
+    function project(){
+        contentBox.style.display = "inline-block";
+        contentBox.innerHTML = "<div style='background-color:rgba(40, 40, 40, 0.534); padding: 20px; border-radius: 10px;'><h2 style='color:rgb(138, 4, 255);'><h2 style='color:rgb(138, 4, 255);'>Project</h2><p>Virtual Banking System (VBS)</p></div>";
+    }
+</script>
+</html>
